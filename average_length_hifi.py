@@ -5,7 +5,8 @@ def calculate_read_lengths(file_path):
     max_length = 0
     min_length = float('inf')
     read_count = 0
-
+## Files must be at fastq format, starting by @
+    
     with gzip.open(file_path, 'rt') as file:
         for line in file:
             if line.startswith('@'):  # Identifies the start of a read
@@ -24,8 +25,8 @@ def calculate_read_lengths(file_path):
 
     return average_length, max_length, min_length
 
-# Provide the path to your compressed FASTQ file
-file_path = 'path/to/your/file.fastq.gz'
+# FASTQ file compressed
+file_path = 'file.fastq.gz'
 
 average_length, max_length, min_length = calculate_read_lengths(file_path)
 
