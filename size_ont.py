@@ -1,5 +1,7 @@
 from Bio import SeqIO
 
+# Select reads from ONT file with a minimun lenght
+
 # Path to the input FASTQ file
 input_file = "all_MiMA.fastq"
 
